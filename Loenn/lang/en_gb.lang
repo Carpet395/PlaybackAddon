@@ -1,0 +1,35 @@
+# Bellstone
+entities.playback/Bellstone.placements.name.Bellstone=Bellstone
+entities.playback/Bellstone.placements.description.Bellstone=Plays the sequence from the Sequence Keybell entities.
+entities.playback/Bellstone.attributes.description.sprite=Custom sprite for the stone, Path from Graphics/Gameplay/ folder, with 3 presets 
+entities.playback/Bellstone.attributes.description.overlaySprite=Custom sprite for the glow, Path from Graphics/Gameplay/ folder, with 3 presets 
+entities.playback/Bellstone.attributes.description.speed=The time the stone plays each note, showing its color, when reaching the end of the list the time wont change for the rest of the notes
+entities.playback/Bellstone.attributes.description.NoteDelay=The time to wait between notes, when no color is shown. useful when the same bell is hit multiple times in the sequence
+entities.playback/Bellstone.attributes.description.colour=The color of the stone glow
+entities.playback/Bellstone.attributes.description.activeColour=The color of the stone glow after beating the puzzle
+entities.playback/Bellstone.attributes.description.VolumeBoost=a bit of volume to the bell sound. Set to 0 for base volume. Set to 1 to have all rings act at max volume (might echo).
+
+# sequence keybell
+entities.playback/OrderKeybell.placements.name.Sequence Keybell=Sequence Keybell
+entities.playback/OrderKeybell.placements.description.Sequence Keybell=Keybells that require a specific sequence to be played to activate
+entities.playback/OrderKeybell.attributes.description.sound=The sound event to be played when the bell is hit. choice will also be reflected on the Bellstone.  
+entities.playback/OrderKeybell.attributes.description.pitch=The pitch of the bell. passed to shader if the bell uses any
+entities.playback/OrderKeybell.attributes.description.colour=The color of the bell. passed to shader if the bell uses any
+entities.playback/OrderKeybell.attributes.description.activeColour=The color of the bell after correctly hittin the sequence. passed to shader if the bell uses any
+entities.playback/OrderKeybell.attributes.name.order=Place In Sequence
+entities.playback/OrderKeybell.attributes.description.order=The place of the bell in the sequence. supports having multiple places. set to -1 for the bell to be a sequence breaker
+entities.playback/OrderKeybell.attributes.description.VolumeBoosta bit of volume to the bell by pretending the player has more speed. Set to 0 for base behaviour. Set to 1 to have all rings act as if the player is at the max speed
+entities.playback/OrderKeybell.attributes.description.SetFlag=Sets a flag when the bell is rung (NOT activated!). Leave blank to not set a flag
+entities.playback/OrderKeybell.attributes.description.FadeBackOnTouch=Wether the bell should briefly show its color when another sequence bell is rung after the bells activated.
+entities.playback/OrderKeybell.attributes.description.Effect=A shader for the bell to be rendered with. Bellstone will also use the shader when its playing a bell with one
+
+# Keybell
+entities.playback/Keybell.placements.name.Keybell=Keybell
+entities.playback/Keybell.placements.description.Keybell=A bell that acts like a touch switch
+entities.playback/Keybell.attributes.description.sound=The sound event to be played when the bell is hit.
+entities.playback/Keybell.attributes.description.pitch=The pitch of the bell. passed to shader if the bell uses any
+entities.playback/Keybell.attributes.description.colour=The color of the bell. passed to shader if the bell uses any
+entities.playback/Keybell.attributes.description.activeColour=The color of the bell after correctly hittin the sequence. passed to shader if the bell uses any
+entities.playback/Keybell.attributes.description.VolumeBoosta bit of volume to the bell by pretending the player has more speed. Set to 0 for base behaviour. Set to 1 to have all rings act as if the player is at the max speed
+entities.playback/Keybell.attributes.description.SetFlag=Sets a flag when the bell is rung. Leave blank to not set a flag
+entities.playback/OrderKeybell.attributes.description.Effect=A shader for the bell to be rendered with. 
