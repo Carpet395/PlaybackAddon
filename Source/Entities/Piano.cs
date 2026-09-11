@@ -77,8 +77,10 @@ public class Piano : Entity
     public OptionsUI UI;
 
     public Dictionary<float, int> Pitches; 
-    public Dictionary<float, int> PitchesShift; 
+    public Dictionary<float, int> PitchesShift;
 
+    string texture = "objects/bellpiano/piano";
+    
     Vector2 drawAt;
     Vector2 ArrowDrawAt;
 
@@ -91,6 +93,7 @@ public class Piano : Entity
     public Piano(EntityData data, Vector2 offset, EntityID id)
         : base(data.Position + offset)
     {
+        texture = data.Attr("texture", "objects/bellpiano/piano");
         Pitches = new Dictionary<float, int>();
         PitchesShift = new Dictionary<float, int>();
         if (Enum.TryParse<PianoModes>(data.Attr("Mode", "FourWay"), out PianoModes Mode))
@@ -153,16 +156,15 @@ public class Piano : Entity
         }
 
 
-
-        Add(sprite = new Image(GFX.Game["objects/bellpiano/piano"]));
+        Add(sprite = new Image(GFX.Game[texture]));
         //Pitch = data.Int("pitch");
         drawAt = new Vector2(sprite.Width / 2, 2);
         Add(Talker = new TalkComponent(new Rectangle(-14, -8, 50, 36), drawAt, Interact));
         Talker.Enabled = true;
         Add(SpriteArrows = new Image(GFX.Game["objects/bellpiano/arrows_empty"]));
         Add(SpriteArrowsHollow = new Image(GFX.Game["objects/bellpiano/arrows_empty_hollow"]));
-
-        string baseTex = Mode == PianoModes.FourWay || Mode == PianoModes.FourWayShift ? "objects/bellpiano/arrows_base" : "objects/bellpiano/arrows_base_diagonals";
+        string baseTex = "objects/bellpiano/arrows_base";
+        baseTex += (Mode == PianoModes.FourWay || Mode == PianoModes.FourWayShift ? "" : "_diagonals");
         if (NoMiddle) baseTex += "_nomiddle";
         Add(SpriteArrowsBase = new Image(GFX.Game[baseTex]));
         Add(SpriteArrowsBaseHollow = new Image(GFX.Game[baseTex + "_hollow"]));

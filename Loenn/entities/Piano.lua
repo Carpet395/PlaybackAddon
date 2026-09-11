@@ -31,10 +31,19 @@ local sounds ={
     "event:/vert_audiohelper/bell",
     "event:/vert_audiohelper/chime"
 }
+local textures = {
+    "objects/bellpiano/piano",
+    "objects/bellpiano/piano_stone"
+}
 
 Piano.name = "playback/piano"
 Piano.depth = 100
 Piano.fieldInformation = {
+    texture = {
+        fieldType = "string",
+        options = textures,
+        editable = true
+    },
     Left = {
         fieldType = "integer",
         options = noteNames,
@@ -143,7 +152,8 @@ Piano.fieldOrder = {
     "Middle","Right",
     "DownRight", "Down",
     "DownLeft","Left",
-    "UpLeft", "Up"
+    "UpLeft", "Up",
+    "noMiddle", "texture"
 }
 
 Piano.placements = {
@@ -155,7 +165,8 @@ Piano.placements = {
             Up = 24,
             Down = 17,
             Left = 20,
-            Right = 13
+            Right = 13,
+            texture = "objects/bellpiano/piano"
         }
     },
     {
@@ -170,7 +181,8 @@ Piano.placements = {
             DownLeft = 19,
             Right = 13,
             DownRight = 15,
-            noMiddle = false
+            noMiddle = false,
+            texture = "objects/bellpiano/piano"
         }
     },
         {
@@ -188,6 +200,7 @@ Piano.placements = {
             Down = 17,
             Left = 20,
             Right = 13,
+            texture = "objects/bellpiano/piano"
         }
     },
     {
@@ -211,15 +224,15 @@ Piano.placements = {
             DownLeft = 19,
             Right = 13,
             DownRight = 15,
-            noMiddle = false
+            noMiddle = false,
+            texture = "objects/bellpiano/piano"
         }
     }
 }
 
 function Piano.sprite(room, entity)
-    local sprite = drawableSprite.fromTexture("objects/bellpiano/piano", entity)
+    local sprite = drawableSprite.fromTexture(entity.texture, entity)
     sprite:setJustification(-0.00, -0.00)
-    sprite:setColor(entity.colour)
     return sprite
 end
 
