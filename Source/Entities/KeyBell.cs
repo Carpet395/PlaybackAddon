@@ -1,4 +1,5 @@
-﻿using Celeste.Mod.audiohelper.Entities;
+﻿using Celeste;
+using Celeste.Mod.audiohelper.Entities;
 using Celeste.Mod.Entities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -6,7 +7,7 @@ using Monocle;
 using System.Collections;
 
 
-namespace Celeste.Mod.playback.Entities;
+namespace PlayBackAddon.Entities;
 
 [CustomEntity("playback/Keybell", "carpet/Keybell")]
 [Tracked(true)]

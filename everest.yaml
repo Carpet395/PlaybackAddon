@@ -1,8 +1,10 @@
-- Name: PlaybackAddon
-  Version: 1.0.0
-  DLL: bin/PlayBackAddon.dll
+- DLL: bin/PlayBackAddon.dll
+  Name: PlaybackAddon
+  Version: 1.0.1
   Dependencies:
+    - Name: Everest
+      Version: 1.6531.0
     - Name: EverestCore
-      Version: 1.6485.0
+      Version: 1.6531.0
     - Name: audiohelper
       Version: 0.3.0

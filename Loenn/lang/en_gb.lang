@@ -1,3 +1,16 @@
+# Piano
+entities.playback/piano.placements.name.Piano_Four=Piano (Fourway)
+entities.playback/piano.placements.name.Piano_FourShift=Piano (Fourway Shift)
+entities.playback/piano.placements.name.Piano_Eight=Piano (Eightway)
+entities.playback/piano.placements.name.Piano_EightShift=Piano (Eightway Shift)
+
+entities.playback/piano.placements.description.Piano_Four=A Piano with 5 possible notes.
+entities.playback/piano.placements.description.Piano_FourShift=A Piano with 5 possible notes + 5 shift notes.
+entities.playback/piano.placements.description.Piano_Eight=A Piano with a full octave of notes.
+entities.playback/piano.placements.description.Piano_EightShift=A Piano with a full octave of notes + shift octave.
+
+entities.playback/piano.attributes.description.noMiddle=Wether to swap the middle note with the top right note
+
 # Bellstone
 entities.playback/Bellstone.placements.name.Bellstone=Bellstone
 entities.playback/Bellstone.placements.description.Bellstone=Plays the sequence from the Sequence Keybell entities.
@@ -12,7 +25,7 @@ entities.playback/Bellstone.attributes.description.VolumeBoost=a bit of volume t
 # sequence keybell
 entities.playback/OrderKeybell.placements.name.Sequence Keybell=Sequence Keybell
 entities.playback/OrderKeybell.placements.description.Sequence Keybell=Keybells that require a specific sequence to be played to activate
-entities.playback/OrderKeybell.attributes.description.sound=The sound event to be played when the bell is hit. choice will also be reflected on the Bellstone.  
+entities.playback/OrderKeybell.attributes.description.sound=The sound event to be played when the bell is hit. choice will also be reflected on the Bellstone and Pianos.  
 entities.playback/OrderKeybell.attributes.description.pitch=The pitch of the bell. passed to shader if the bell uses any
 entities.playback/OrderKeybell.attributes.description.colour=The color of the bell. passed to shader if the bell uses any
 entities.playback/OrderKeybell.attributes.description.activeColour=The color of the bell after correctly hittin the sequence. passed to shader if the bell uses any

@@ -29,7 +29,8 @@ local noteNames = {
 }
 local sounds ={
     "event:/vert_audiohelper/bell",
-    "event:/vert_audiohelper/chime"
+    "event:/vert_audiohelper/chime",
+    "event:/Playback/Piano"
 }
 
 Bell.name = "playback/OrderKeybell"

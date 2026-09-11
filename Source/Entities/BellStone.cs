@@ -1,4 +1,5 @@
-﻿using Celeste.Mod.audiohelper.Entities;
+﻿using Celeste;
+using Celeste.Mod.audiohelper.Entities;
 using Celeste.Mod.Entities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -6,9 +7,9 @@ using Monocle;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Celeste.Mod.playback.Entities;
+namespace PlayBackAddon.Entities;
 
-[CustomEntity("carpet/Bellstone")]
+[CustomEntity("playback/Bellstone", "carpet/Bellstone")]
 public class BellStone : Entity
 {
     private OrderKeyBell leader = null;

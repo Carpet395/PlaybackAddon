@@ -1,10 +1,12 @@
-﻿using Celeste.Mod.Entities;
+﻿using Celeste;
+using Celeste.Mod;
+using Celeste.Mod.Entities;
 using Microsoft.Xna.Framework;
 using Monocle;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Celeste.Mod.playback.Entities;
+namespace PlayBackAddon.Entities;
 
 [CustomEntity("playback/OrderKeybell", "carpet/OrderKeybell")]
 [Tracked(true)]

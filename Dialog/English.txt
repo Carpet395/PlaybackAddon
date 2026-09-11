@@ -1,0 +1,2 @@
+PLAYBACK_PLAY=Play
+PLAYBACK_SHIFT=Octave Shift

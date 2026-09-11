@@ -1,8 +1,8 @@
 ﻿using Celeste.Mod.audiohelper.Entities;
-using Celeste.Mod.playback.Entities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Monocle;
+using PlayBackAddon.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
