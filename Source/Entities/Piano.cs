@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Monocle;
 using System.Collections;
+using YamlDotNet.Core.Tokens;
 
 
 namespace PlayBackAddon.Entities;
@@ -220,7 +221,7 @@ public class Piano : Entity
         fade = 0;
         player.StateMachine.State = 11;
         player.StateMachine.Locked = true;
-
+        Audio.SetMusicParam("fade", 0.5f);
         Bells = new Dictionary<int, Bell>();
         foreach (Bell bell in Scene.Entities.FindAll<Bell>())
         {
@@ -282,6 +283,7 @@ public class Piano : Entity
         spriteArrowsBase.Visible = false;
         spriteArrows.Visible = false;
 
+        Audio.SetMusicParam("fade", 1);
         yield return 0.25f;
         Talker.Enabled = true;
     }
